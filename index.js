@@ -1,4 +1,5 @@
 const express =require('express');
+const cors = require('cors');
 
 require('dotenv').config();
 
@@ -9,7 +10,7 @@ const mongoose =require('mongoose');
 
 const tastroutes=require('./routes/taskroute');
 const userrouters=require('./routes/userroute');
-
+app.use(cors()); 
 app.use(cookieParser());
 app.use(express.json());
 
